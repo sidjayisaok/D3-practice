@@ -49,10 +49,6 @@ var jsonCircles =[
 ];
 
 var barData = [1, 2, 4, 8, 16, 32, 64, 128];
-//works with chart below
-var x = d3.scale.linear()
-        .domain([0, d3.max(barData)])
-        .range([0, 420]);
 
 //definitions for the svgs
 var svgContain = d3.select("body").append("svg")
@@ -70,6 +66,11 @@ var rectangle = svgContain.selectAll("rect")
               .data(jsonRectangle)
               .enter()
               .append("rect");
+
+//works with chart below
+var x = d3.scale.linear()
+        .domain([0, d3.max(barData)])
+        .range([0, 420]);
 
 //attempting to draw bar chart
 var barChart =  d3.select("div")
