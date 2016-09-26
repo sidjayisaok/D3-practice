@@ -144,13 +144,13 @@ let endClass ='webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend a
 //animates rectangles
 $('rect').on({
  'click': ()=>{
-     $('rect').addClass(bounceClass).one(endClass, function(){
+     $('rect').addClass(bounceClass).one(endClass, ()=>{
          $(this).removeClass(bounceClass);
      })
  },
 //this makes them animate when hovering over them via the mouse
  'mouseover': ()=>{
-     $('rect').addClass(flipClass).one(endClass, function(){
+     $('rect').addClass(flipClass).one(endClass, ()=>{
          $(this).removeClass(flipClass);
      })
  }
@@ -159,13 +159,13 @@ $('rect').on({
 //animates circles
 $('circle').on({
  'click': ()=>{
-     $('circle').addClass(rubberClass).one(endClass, function(){
+     $('circle').addClass(rubberClass).one(endClass, ()=>{
          $(this).removeClass(rubberClass);
      })
  },
 //this makes them animate when hovering over them via the mouse
  'mouseover': ()=>{
-     $('circle').addClass(tadaClass).one(endClass, function(){
+     $('circle').addClass(tadaClass).one(endClass, ()=>{
          $(this).removeClass(tadaClass);
      })
  }
@@ -175,13 +175,13 @@ $('circle').on({
 //animates bar chart
 $('.myChart').on({
  'click': ()=>{
-     $('.myChart').addClass(fadeinClass).one(endClass, function(){
+     $('.myChart').addClass(fadeinClass).one(endClass, ()=>{
          $(this).removeClass(fadeinClass);
      })
  },
 //this makes them animate when hovering over them via the mouse
  'mouseover': ()=>{
-     $('.myChart').addClass(fadeoutClass).one(endClass, function(){
+     $('.myChart').addClass(fadeoutClass).one(endClass, ()=>{
          $(this).removeClass(fadeoutClass);
      })
  }
